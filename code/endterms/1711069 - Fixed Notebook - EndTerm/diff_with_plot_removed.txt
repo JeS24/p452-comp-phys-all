@@ -1,0 +1,62 @@
+   "outputs": [],
+   "source": [
+    "# Simulating 500 200-step 2D random walks with possible movement choices limited to [-1, 1] in each direction ('grid' movement) with (a, m) = (572, 16381)\n",
+    "paths, fig = k_rand_walker(k=500, ndim=2, steps=200, movement=\"grid\", sampling=\"uniform\", a=572, m=16381)\n",
+    "# fig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "RMS(N = 200) for 500 simulated 2D random walks = 15.150181517064407 and sqrt(200) = 14.142135623730951.\n"
+     ]
+    "# Calculating RMS(N = 200) for 500 walks\n",
+    "rms = 0\n",
+    "\n",
+    "for path in paths:\n",
+    "    rms += path[:, -1][-1] ** 2\n",
+    "\n",
+    "rms /= len(paths)\n",
+    "print(f\"RMS(N = 200) for 500 simulated 2D random walks = {np.sqrt(rms)} and sqrt(200) = {np.sqrt(200)}.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "So, $R_{\\text{rms}}(N = 200) \\approx \\sqrt{N}$. Note that, with a better set of $(a, m)$ values, the approximation becomes even better. For instance, with $(a, m) = (1664525, 2^{32})$ (as recommended by Numerical Recipes), we get:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# fig"
+     "data": {
+      "text/plain": [
+       "(133.5376748040098, 132.92479144643394, 117.38564375605866)"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    "_4chi, _5chi, _6chi = chi_sq_by_v(x, y, yerr, _4tuple), chi_sq_by_v(x, y, yerr, _5tuple), chi_sq_by_v(x, y, yerr, _6tuple)\n",
+   "execution_count": 12,
+   "execution_count": 13,
+   "execution_count": 14,
+   "execution_count": 15,
+   "execution_count": 16,
+   "execution_count": 17,
+   "execution_count": 18,
+   "execution_count": 19,
+      "Results using Gaussian Quadrature at various orders up to 10^(-9) precision:\n",
+      "Analytical value of the integral for given parameters up to 10^(-9) precision = 1.762747174.\n"
+   "execution_count": 20,

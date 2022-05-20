@@ -1,9 +1,5 @@
-# P452 - Computational Physics Term Paper
+# P452 - Computational Physics
 
-### Non-linear PDE - High Resolution Numerical Scheme by Kurganov-Tadmor (2000)
+All of the code I wrote for this course can be found in this repository.
 
-### Dependencies:
-```
-matplotlib>=3.5.1
-numpy>=1.22.3
-```
+NOTE: Some notebooks use plotly for interactive plots and to plot a large number of points that matplotlib cannot handle. Open these notebooks in a Jupyter session to view those plots.
